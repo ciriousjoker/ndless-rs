@@ -22,6 +22,7 @@ fn lang_start<T: ndless::process::Termination + 'static>(
 	main: fn() -> T,
 	argc: isize,
 	argv: *const *const u8,
+	_: u8,
 ) -> isize {
 	unsafe {
 		ndless::__init(slice::from_raw_parts(argv as *const _, argc as usize));
