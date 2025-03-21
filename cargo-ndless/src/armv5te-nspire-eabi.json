@@ -19,5 +19,6 @@
     "dynamic-linking": false,
     "executables": true,
     "features": "+v5te,+soft-float,+strict-align",
-    "singlethread": true
+    "singlethread": true,
+    "llvm_floatabi": "soft"
 }
