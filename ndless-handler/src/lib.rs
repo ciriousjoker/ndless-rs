@@ -41,10 +41,7 @@ fn on_oom(_layout: core::alloc::Layout) -> ! {
 #[panic_handler]
 fn panic(info: &core::panic::PanicInfo) -> ! {
 	{
-		let msg = match info.message() {
-			Some(err) => format!("An error occured: {}", err),
-			None => "An error occured!".to_string(),
-		};
+		let msg = format!("An error occurred: {}", info.message());
 		let location = match info.location() {
 			Some(loc) => format!(
 				"In file {} at line {} column {}",
